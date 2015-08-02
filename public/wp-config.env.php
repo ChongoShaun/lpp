@@ -16,15 +16,15 @@
 
 // Set environment based on hostname
 switch ($hostname) {
-    case 'dev.basewp.10.1.10.13.xip.io:8888':
+    case 'lppschools.dev:8888':
         define('WP_ENV', 'development');
         break;
     
-    case 'clients.barkdesignchicago.com':
+    case 'lengthofdaylight.com':
         define('WP_ENV', 'staging');
         break;
 
-    case 'www.domain.com':
+    case 'www.lppschools.com':
     default: 
         define('WP_ENV', 'production');
 }
