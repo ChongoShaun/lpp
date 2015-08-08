@@ -40,14 +40,52 @@
 
 	<!-- Header / Nav / Global Etc
 	================================================== -->
-	<div class="container">
-		<div class="twelve columns">
-			<div id="logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a>
-			</div>
+	<section id="navigation">
+		<div class="big-container full-width">
+			<div class="container">
+				<div class="three columns">
+					[LOGO]
+				</div>
+				<div class="nine columns">
+					<nav>
+						NAV
+					</nav>
+				</div>
+			</div>			
 		</div>
-		<div class="twelve columns">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+	</section>
+	<section id="page-hero">
+		<?php 
+		if( is_front_page() ):
+			$hero_class = "big-hero";
+		else:
+			$hero_class = "small-hero";				
+		endif;
+		?>
+		<div class="big-container full-width <?php echo $hero_class;?>">
+			<?php
+			if( is_front_page() ):
+				?>
+				<div id="hero-message">
+					HERO MESSAGE!
+				</div>
+				<?php
+			endif;
+			?>
 		</div>
-	</div>
+	</section>
+	<section id="secondary-navigation">
+		<div class="big-container full-width">
+			<?php
+			if( is_front_page() ):
+				?>
+				<div id="secondary-navigation-message">
+					MESSAGE!
+				</div>
+				<?php
+			endif;
+			?>
+		</div>
+	</section>
+
 	<!-- End Header -->

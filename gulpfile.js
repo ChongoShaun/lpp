@@ -1,5 +1,5 @@
 // Setup variables for project paths
-var themePath = 'public/wp-content/themes/Ribs/';
+var themePath = 'public/wp-content/themes/lpp/';
 
 // Include gulp
 var gulp = require('gulp'); 
@@ -9,6 +9,7 @@ var browserSync = require('browser-sync').create();
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var sass = require('gulp-sass');
+var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -61,9 +62,8 @@ gulp.task('scripts', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
    browserSync.init({
-        proxy: "dev.basewp.10.1.10.13.xip.io:8888",
-        host: "localhost",
-        port: 8888
+        proxy: "lppschools.dev:8888",
+        host: "localhost"
     });
     gulp.watch('src/assets/js/*.js', ['lint', 'scripts']);
     gulp.watch('src/assets/images/**/*', ['images']);
