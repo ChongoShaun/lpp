@@ -134,7 +134,7 @@ textarea:focus {
   border: $form_input_focus_border;
   color: $form_input_focus_text_color;
   outline: $form_input_focus_outline;
-  @include box-shadow($form_input_focus_box_shadow_x, $form_input_focus_box_shadow_y, $form_input_focus_box_shadow_blur, $form_input_focus_box_shadow_color)
+  @include box-shadow($form_input_focus_box_shadow_x, $form_input_focus_box_shadow_y, $form_input_focus_box_shadow_blur,  $form_input_focus_box_shadow_blur, $form_input_focus_box_shadow_color)
 }
 
 // ##Textarea min height

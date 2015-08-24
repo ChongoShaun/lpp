@@ -43,13 +43,20 @@
 	<section id="navigation">
 		<div class="big-container full-width">
 			<div class="container">
-				<div class="three columns">
-					[LOGO]
+				<div class="four columns">
+					<div class="logo">
+						<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo_lpp.gif" class="scale-with-grid" />
+					</div>
 				</div>
-				<div class="nine columns">
-					<nav>
-						NAV
-					</nav>
+				<div class="eight columns">
+					<div class="row">
+						<?php wp_nav_menu( array( 'theme_location' => 'utility-menu' ) ); ?>
+					</div>
+					<div class="row">
+						<nav>
+							<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+						</nav>
+					</div>
 				</div>
 			</div>			
 		</div>

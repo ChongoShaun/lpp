@@ -15,3 +15,39 @@ hr {
   margin: $hr_margin;
   height: 0;
 }
+
+/* Section Styles */
+
+.dynamic-section{
+	.big-container{
+		padding:40px 0;
+		@include vertical-gradient(#bdb4a3, #ded6c6);
+	}
+	.first-section{
+		@include vertical-gradient(#bdb4a3, #ded6c6);
+	}
+}
+
+/* Nav */
+
+.menu{
+	margin:0;
+	li{
+		display:inline;		
+	}
+}
+
+#menu-utility-menu{
+	ul{
+		
+	}
+	li{
+		font-size:14px;
+	}
+}
+
+#menu-main-menu{
+	li{
+		font-size:18px;
+	}
+}

@@ -109,10 +109,10 @@
   background-repeat: repeat-x;
 }
 
-@mixin box-shadow($a, $b, $c, $color) {
-  -moz-box-shadow: $a $b $c $color;
-  -webkit-box-shadow: $a $b $c $color;
-  box-shadow: $a $b $c $color;
+@mixin box-shadow($a, $b, $c, $d, $color) {
+  -moz-box-shadow: $a $b $c $d $color;
+  -webkit-box-shadow: $a $b $c $d $color;
+  box-shadow: $a $b $c $d $color;
 }
 
 @mixin grid($grid-container-width, $grid-column-count:$column-count, $grid-gutter:$gutter) {

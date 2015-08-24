@@ -7,7 +7,9 @@ function ribs_setup(){
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
 	register_nav_menus(
-		array( 'main-menu' => __( 'Main Menu', 'ribs' ) )
+		array( 'main-menu' => __( 'Main Menu', 'ribs' ),
+			   'utility-menu' => __( 'Utility Menu', 'ribs' )
+		)
 	);
 }
 add_action('comment_form_before', 'ribs_enqueue_comment_reply_script');
@@ -161,16 +163,4 @@ function ribs_custom_pings($comment, $args, $depth) {
 <?php comment_text() ?>
 </div>
 <?php }
-
-// Register new thumb sizes for NEWS
-/*
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'home-large', 460, 344, true ); //(cropped)
-	add_image_size( 'home-medium', 460, 144, true ); //(cropped)
-	add_image_size( 'home-small', 220, 180, true ); //(cropped)
-	add_image_size( 'home-project', 640, 306, true ); //(cropped)
-	add_image_size( 'news-thumb', 340, 164, true ); //(cropped)
-
-}
-*/
 
