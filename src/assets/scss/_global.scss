@@ -78,7 +78,11 @@ hr {
 			background-color:#218bc3;
 		}
 	}
-
+	.current_page_item{
+		a{
+			background-color:#218bc3;
+		}
+	}
 }
 
 /* Hero Styles */
@@ -129,6 +133,16 @@ hr {
 }
 .small-hero{
 	height:360px;
+	padding-top:75px;
+	position:relative;
+	.small-slide{
+		width:100%;
+		height:360px;
+		background-repeat:no-repeat; 
+		background-size:cover;
+		z-index:9500;
+		
+	}
 }
 
 

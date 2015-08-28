@@ -4,7 +4,7 @@ if( have_rows('layouts') ):
 	$i = 1;
     while ( have_rows('layouts') ) : the_row();
 		if( $i == 1):
-			get_template_part('includes/layout','section-break-before');
+			include(locate_template('includes/layout-section-break-before.php'));
 
 		endif;
 

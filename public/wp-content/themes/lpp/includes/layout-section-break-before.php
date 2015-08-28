@@ -8,7 +8,7 @@
 	if ( get_sub_field('background_image') ):
 		$background_image = get_sub_field('background_image');
 	else:
-		$background_image = "none";
+		$background_image = "";
 	endif;
 	if ( get_sub_field('image_repeat') ):
 		$image_repeat = get_sub_field('image_repeat');
@@ -27,7 +27,7 @@
 	</div>
 </section>
 
-<section class="dynamic-section">
+<section class="dynamic-section <?php if ($i==1): echo 'first-section'; endif;?>">
 	<div class="big-container <?php echo $output_class; ?>" style="background-color:<?php echo $background_color; ?>;background-image:url(<?php echo $background_image['url'] ?>), url(<?php bloginfo('template_directory');?>/assets/images/bg_shadow.png); background-position:center top; background-repeat:<?php echo $bg_class;?>, repeat-x;">
 <?php	
 ?>
