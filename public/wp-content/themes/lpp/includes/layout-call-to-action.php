@@ -6,7 +6,7 @@
 	<div class="container call-to-action">
 		<div class="row">
 			<div class="twelve columns">
-				<?php echo $text;?>			
+				<?php echo $cta_text;?>			
 			</div>
 		</div>
 	</div>

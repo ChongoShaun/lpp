@@ -62,7 +62,7 @@ gulp.task('scripts', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
    browserSync.init({
-        proxy: "lppschools.dev:8888",
+        proxy: "l.dev:8888",
         host: "localhost"
     });
     gulp.watch('src/assets/js/*.js', ['lint', 'scripts']);

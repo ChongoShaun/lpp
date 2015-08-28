@@ -20,7 +20,7 @@ switch ($hostname) {
         define('WP_ENV', 'development');
         break;
     
-    case 'lengthofdaylight.com':
+    case 'l.dev:8888':
         define('WP_ENV', 'staging');
         break;
 

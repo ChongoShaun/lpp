@@ -20,7 +20,7 @@ hr {
 
 .dynamic-section{
 	.big-container{
-		padding:40px 0;
+		padding:0;
 		@include vertical-gradient(#bdb4a3, #ded6c6);
 	}
 	.first-section{
@@ -31,7 +31,12 @@ hr {
 /* Nav */
 
 .nav{
+	width:100%;
+	height:75px;
+	position:fixed;
+	padding:15px 0;
 	background-color:#fff;
+	z-index: 9999;
 }
 
 .menu{
@@ -79,8 +84,74 @@ hr {
 /* Hero Styles */
 
 .big-hero{
+	padding-top:75px;
 	height:700px;
+	position:relative;
+	.slide{
+		width:100%;
+		height:700px;
+		background-repeat:no-repeat; 
+		background-size:cover;
+		z-index:9500;
+	}
+	#hero-dot{
+		width:100%;
+		bottom:0;
+		color:#fff;
+		position:absolute; 
+		text-align:center;
+		z-index: 9980;
+		span{
+			padding:0 2px;
+			font-size:40px;
+			text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+		}
+		.cycle-pager-active{
+			color:blue;
+		}
+	}
+	.hero-message{
+		position:absolute;
+		width:390px;
+		right:15%;
+		top:100px;
+		padding:30px;
+		background-color:rgba(32,80,107,.8);
+		color:#fff;
+		h1{
+			color:#fff;
+		}
+	}
+
 }
 .small-hero{
 	height:360px;
+}
+
+
+/* Layout Styles */
+
+.call-to-action{
+	padding:40px 0;
+	p{
+		margin:0;
+		padding:0;
+	}
+	
+}
+
+.fullwidth{
+	padding:40px 0 0;
+
+}
+
+.two-column{
+	padding:40px 0;
+}
+
+.three-columns{
+	padding:40px 0;
 }

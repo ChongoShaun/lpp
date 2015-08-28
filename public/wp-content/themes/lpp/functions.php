@@ -184,3 +184,18 @@ function get_post_top_ancestor_id(){
     return $post->ID;
 }}
 
+// Enqueue JS
+add_action( 'wp_enqueue_scripts', 'wp_load_javascript_files' );
+
+function wp_load_javascript_files() {
+
+	wp_enqueue_script( 'jquery' );
+	wp_register_script( 'cycle2', get_template_directory_uri() . '/assets/js/vendor/cycle2.min.js', false, false, true );
+	wp_enqueue_script( 'cycle2' );
+/*
+	wp_register_script( 'wp_common', get_template_directory_uri() . '/assets/js/common.min.js', false, false, true );
+	wp_enqueue_script( 'wp_common' );		
+*/
+}
+
+
