@@ -41,11 +41,11 @@
 	<!-- Header / Nav / Global Etc
 	================================================== -->
 	<section id="navigation">
-		<div class="big-container full-width">
+		<div class="big-container full-width nav">
 			<div class="container">
 				<div class="four columns">
 					<div class="logo">
-						<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo_lpp.gif" class="scale-with-grid" />
+						<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/images/logo_lpp.gif" class="scale-with-grid" /></a>
 					</div>
 				</div>
 				<div class="eight columns">
@@ -59,39 +59,6 @@
 					</div>
 				</div>
 			</div>			
-		</div>
-	</section>
-	<section id="page-hero">
-		<?php 
-		if( is_front_page() ):
-			$hero_class = "big-hero";
-		else:
-			$hero_class = "small-hero";				
-		endif;
-		?>
-		<div class="big-container full-width <?php echo $hero_class;?>">
-			<?php
-			if( is_front_page() ):
-				?>
-				<div id="hero-message">
-					HERO MESSAGE!
-				</div>
-				<?php
-			endif;
-			?>
-		</div>
-	</section>
-	<section id="secondary-navigation">
-		<div class="big-container full-width">
-			<?php
-			if( is_front_page() ):
-				?>
-				<div id="secondary-navigation-message">
-					MESSAGE!
-				</div>
-				<?php
-			endif;
-			?>
 		</div>
 	</section>
 
