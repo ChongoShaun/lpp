@@ -5,7 +5,6 @@ if( have_rows('layouts') ):
     while ( have_rows('layouts') ) : the_row();
 		if( $i == 1):
 			include(locate_template('includes/layout-section-break-before.php'));
-
 		endif;
 
         if( get_row_layout() == 'section_break' ):
@@ -21,7 +20,7 @@ if( have_rows('layouts') ):
 		elseif( get_row_layout() == 'four_columns' ): 
 			get_template_part('includes/layout','four-columns');     
 		elseif( get_row_layout() == 'horizontal_rule' ): 
-			// HR
+			get_template_part('includes/layout','rule');     			
 		elseif( get_row_layout() == 'gallery' ): 
 			get_template_part('includes/layout','gallery');     
 		endif;

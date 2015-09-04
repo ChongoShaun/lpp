@@ -6,7 +6,7 @@ Template Name: Secondary Page
 
 <?php get_header(); ?>
 
-	<!-- Landing Page
+	<!-- Secondary Page
 	================================================== -->
 	
 	<?php
@@ -25,7 +25,7 @@ Template Name: Secondary Page
 		get_template_part('includes/dynamic-layout');
 	?>
 						
-	<!-- End Home Template -->
+	<!-- End Secondary Template -->
 
 <?php get_footer(); ?>
 

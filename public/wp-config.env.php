@@ -16,7 +16,7 @@
 
 // Set environment based on hostname
 switch ($hostname) {
-    case 'lppschools.dev:8888':
+    case 'lppschools.dev':
         define('WP_ENV', 'development');
         break;
     

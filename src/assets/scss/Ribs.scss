@@ -21,6 +21,10 @@
 @import "_tables";
 @import "_global";
 
+@include font-face(ITCLubalinGraphBook, "../fonts/itclubalingraphbook-webfont");
+@include font-face(ITCLubalinGraphStdDemi, "../fonts/lubalingraphstd-demi-webfont");
+@include font-face(ITCLubalinGraphStdDemi, "../fonts/lubalingraphstd-demi-webfont", "bold");
+
 
 // #Example Media Queries
 // ##Media Query - Smaller than standard 960 (devices and browsers)

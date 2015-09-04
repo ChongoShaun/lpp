@@ -5,6 +5,8 @@ body {
   color: #444;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // #General horizontal rule style
@@ -16,15 +18,23 @@ hr {
   height: 0;
 }
 
+.button{
+	color:#fff !important;
+	font-weight:bold;
+}
+
 /* Section Styles */
 
 .dynamic-section{
 	.big-container{
-		padding:0;
+		padding:95px 0;
 		@include vertical-gradient(#bdb4a3, #ded6c6);
 	}
-	.first-section{
+	&.first-section{
 		@include vertical-gradient(#bdb4a3, #ded6c6);
+		.big-container{
+			padding-top:25px;
+		}
 	}
 }
 
@@ -37,32 +47,76 @@ hr {
 	padding:15px 0;
 	background-color:#fff;
 	z-index: 9999;
+
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(0,0,0,.6);
+       -moz-box-shadow: 0px 0px 8px 5px rgba(0,0,0,.6);
+            box-shadow: 0px 0px 8px 5px rgba(0,0,0,.6);
+
+
 }
 
 .menu{
-	margin:0;
 	li{
 		display:inline;		
 	}
 }
 
 #menu-utility-menu{
-	ul{
-		
-	}
+	padding-left:20px;
+	margin:5px 0 10px !important;
 	li{
 		font-size:14px;
+		text-transform: uppercase;
+		padding-right:15px;
+		font-family: Arial, sans-serif;
+		&.current-page-ancestor{
+			a{
+				color:#044366;
+			}
+		}
+		&.current_page_item{
+			a{
+				color:#044366;
+			}			
+		}
+		
+	}
+	a{
+		color:#666666;
 	}
 }
 
 #menu-main-menu{
+	padding-left:20px;
 	li{
 		font-size:18px;
+		padding-right:15px;
+		font-family: "ITCLubalinGraphStdDemi", Arial, sans-serif;
+		&.current-page-ancestor{
+			a{
+				color:#044366;
+			}
+		}
+		&.current_page_item{
+			a{
+				color:#044366;
+			}			
+		}
+	}
+	a{
+		color:#218bc3;
+		text-transform: uppercase;
+		&:hover{
+			color:#fba919;
+		}
 	}
 }
 
 #secondary-navigation{
 	background-color:#044366;
+	background-image:url(../images/bg_shadow.png);
+	background-repeat: repeat-x;
+	background-position:center top;
 	ul{
 		margin:0;
 		padding:0;
@@ -74,12 +128,20 @@ hr {
 		display:inline-block;
 		padding:30px 15px;
 		color:#fff;
+		text-transform: uppercase;
+		font-size:18px;
 		&:hover{
+			background-image:url(../images/bg_shadow.png);
+			background-repeat: repeat-x;
+			background-position:center top;
 			background-color:#218bc3;
 		}
 	}
 	.current_page_item{
 		a{
+			background-image:url(../images/bg_shadow.png);
+			background-repeat: repeat-x;
+			background-position:center top;
 			background-color:#218bc3;
 		}
 	}
@@ -88,9 +150,12 @@ hr {
 /* Hero Styles */
 
 .big-hero{
-	padding-top:75px;
+	padding-top:105px;
 	height:700px;
 	position:relative;
+	font-family: "ITCLubalinGraphBook", Arial, sans-serif;
+	
+
 	.slide{
 		width:100%;
 		height:700px;
@@ -105,16 +170,17 @@ hr {
 		position:absolute; 
 		text-align:center;
 		z-index: 9980;
+		font-family: Arial, sans-serif;
 		span{
 			padding:0 2px;
-			font-size:40px;
+			font-size:50px;
 			text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
 
 		}
 		.cycle-pager-active{
-			color:blue;
+			color:#57acda;
 		}
 	}
 	.hero-message{
@@ -127,6 +193,12 @@ hr {
 		color:#fff;
 		h1{
 			color:#fff;
+			font-size:36px;
+			line-height:38px;
+		}
+		p{
+			font-size:22px;
+			line-height:28px;
 		}
 	}
 
@@ -145,27 +217,209 @@ hr {
 	}
 }
 
+/* Caption Styles */
+
+.wp-caption{
+	position:relative;
+	margin-bottom:20px;
+	img{
+		width:95%;
+		border:6px solid #d3d3cc;
+		box-shadow: 2px 2px 5px 0px #8c877c;		
+	}
+	a{
+		color:#fff !important;
+	}
+	figcaption{
+		position:absolute;
+		width:95%;
+		left:6px;
+		bottom:12px;
+		padding:20px 0px;
+		text-align:center;
+		background-color:rgba(196,18,48,.7);
+		font-size:22px;
+		color:#fff !important;
+	}
+}
+
+
+
 
 /* Layout Styles */
 
+%dynamic-layout{
+	h1{
+		padding-top:20px;
+		font-size:30px;
+		color:#044366;
+		line-height:normal;
+	}
+	h2{
+		margin-bottom:10px;
+		font-size:30px;
+		color:#044366;
+	}
+	h3{
+		font-size:20px;
+		line-height:22px;
+		color:#044366;
+	}
+	h4{
+		
+	}
+	h5{
+		
+	}
+	h6{
+		font-size:15px;		
+	}
+	p{
+		font-family: Arial, sans-serif;
+	}
+	a{
+		color:#218bc3;
+		&:hover{
+			color:#044366
+		}
+	}
+	
+}
+
 .call-to-action{
-	padding:40px 0;
+	@extend %dynamic-layout;
+	color:#fff;
+	text-align:center;
 	p{
 		margin:0;
 		padding:0;
+		font-size:36px;
+		font-family: "ITCLubalinGraphBook", Arial, sans-serif;
+	}
+	a{
+		color:#fba919;
+		&:hover{
+			color:#fff;
+		}
+	}
+	.big-container{
+		padding:25px 0;		
+		background-color:#044366 !important;
 	}
 	
 }
 
 .fullwidth{
-	padding:40px 0 0;
-
+	@extend %dynamic-layout;
+	p{
+		font-size:22px;
+		line-height:28px;
+		font-family: "ITCLubalinGraphBook", Arial, sans-serif;
+	}
 }
 
 .two-column{
-	padding:40px 0;
+	@extend %dynamic-layout;
+	p{
+		font-size:15px;
+		line-height:18px;
+	}
+	figcaption{
+		background-color:rgba(251,169,25,.85);
+	}
 }
 
 .three-columns{
-	padding:40px 0;
+	@extend %dynamic-layout;
+	p{
+		font-size:15px;
+	}
+}
+
+.gallery{
+	padding:20px 0;
+	a{
+	}
+	img{
+		margin:10px 0;
+		width:95%;
+		border:6px solid #d3d3cc;
+		box-shadow: 2px 2px 5px 0px #8c877c;
+	}
+}
+
+.home{
+	.fullwidth{
+		p{
+			font-size:22px;
+			line-height:28px;
+			font-family: "ITCLubalinGraphBook", Arial, sans-serif;
+		}
+	}
+	
+	.two-column{
+		p{
+			font-size:22px;
+			line-height:28px;
+			font-family: "ITCLubalinGraphBook", Arial, sans-serif;
+		}
+	}
+	
+	.three-columns{
+		p{
+			font-size:15px;
+		}
+	}
+	
+}
+
+/* News */
+
+.news{
+	.row{
+		margin-bottom:25px;
+		padding-bottom:20px;
+		border-bottom:1px solid #878c93;
+		&:last-child{
+			border:0;
+		}
+	}
+}
+
+/* Calendar */
+
+#tribe-events{
+	margin-top:40px;
+	.tribe-events-page-title{
+		text-align:left;
+	}
+	.tribe-events-calendar{
+		background:none;
+	}
+	div[id*=tribe-events-daynum-]{
+		background-color:#c7cbc0;
+	}	
+	th{
+		background-color:#e7e3d8;
+	}
+	.tribe-events-present {
+		div[id*=tribe-events-daynum-]{
+			background-color:#77786d
+		}
+	}
+}
+
+/* Footer */
+
+#footer{
+	.big-container{
+		padding:75px 0;
+		background-image:url(../images/bg_shadow.png);
+		background-repeat:repeat-x;
+		background-color:#fff;
+		font-size:12px;
+	}
+	.copyright{
+		text-align:right;
+	}
 }

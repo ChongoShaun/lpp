@@ -42,8 +42,6 @@ function ribs_comment_form_defaults( $args )
 }
 add_action( 'init', 'ribs_add_shortcodes' );
 function ribs_add_shortcodes() {
-	add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
-	add_shortcode('caption', 'fixed_img_caption_shortcode');
 	add_filter('img_caption_shortcode', 'ribs_img_caption_shortcode_filter',10,3);
 	add_filter('widget_text', 'do_shortcode');
 }
@@ -63,8 +61,7 @@ function ribs_img_caption_shortcode_filter($val, $attr, $content = null)
 		$capid = 'id="figcaption_'. $id . '" ';
 		$id = 'id="' . $id . '" aria-labelledby="figcaption_' . $id . '" ';
 	}
-	return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: '
-		. (10 + (int) $width) . 'px">' . do_shortcode( $content ) . '<figcaption ' . $capid
+	return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<figcaption ' . $capid
 		. 'class="wp-caption-text">' . $caption . '</figcaption></figure>';
 }
 add_action( 'widgets_init', 'ribs_widgets_init' );
@@ -197,5 +194,6 @@ function wp_load_javascript_files() {
 	wp_enqueue_script( 'wp_common' );		
 */
 }
+
 
 

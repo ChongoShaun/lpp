@@ -25,7 +25,7 @@ Template Name: Landing Page
 		get_template_part('includes/dynamic-layout');
 	?>
 						
-	<!-- End Home Template -->
+	<!-- End Landing Template -->
 
 <?php get_footer(); ?>
 

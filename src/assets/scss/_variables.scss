@@ -15,28 +15,28 @@ $mobile-max-breakpoint: $tablet-container-width - 1 !default;
 $form_element_font: Arial, sans-serif !default;
 
 // ##button
-$form_button_border_radius: 3px !default;
-$form_button_border_topleft: 1px solid #ccc !default;
-$form_button_border_rightbottom: 1px solid #aaa !default;
-$form_button_text_color: #444 !default;
-$form_button_text_shadow: 0 1px rgba(255, 255, 255, .75) !default;
-$form_button_gradient_start: rgba(255, 255, 255, .2) !default;
-$form_button_gradient_end: rgba(0, 0, 0, .2) !default;
-$form_button_font_size: 11px !default;
+$form_button_border_radius: 0px !default;
+$form_button_border_topleft: 0 !default;
+$form_button_border_rightbottom: 0 !default;
+$form_button_text_color: #fff !default;
+$form_button_text_shadow: none !default;
+$form_button_gradient_start: rgba(251, 169, 25, 1) !default;
+$form_button_gradient_end: rgba(251, 169, 25, 1) !default;
+$form_button_font_size: 14px !default;
 $form_button_padding: 8px 10px !default;
 $form_button_line_height: normal !default;
 
 // ##button hover
-$form_button_hover_border_topleft: 1px solid #aaa !default;
-$form_button_hover_border_rightbottom: 1px solid #888 !default;
-$form_button_hover_gradient_start: rgba(255, 255, 255, .3) !default;
-$form_button_hover_gradient_end: rgba(0, 0, 0, .3) !default;
-$form_button_hover_text_color: #222 !default;
+$form_button_hover_border_topleft: 0 !default;
+$form_button_hover_border_rightbottom: 0 !default;
+$form_button_hover_gradient_start: rgba(251, 169, 25, 1) !default;
+$form_button_hover_gradient_end: rgba(251, 169, 25, 1) !default;
+$form_button_hover_text_color: #eee !default;
 
 // ##Button active
-$form_button_active_border: 1px solid #666 !default;
-$form_button_active_gradient_start: rgba(255, 255, 255, .2) !default;
-$form_button_active_gradient_end: rgba(0, 0, 0, .2) !default;
+$form_button_active_border: 0 !default;
+$form_button_active_gradient_start: rgba(251, 169, 25, 1) !default;
+$form_button_active_gradient_end: rgba(251, 169, 25, 1) !default;
 
 // ##Form input
 $form_input_border: 1px solid #ccc !default;
@@ -78,13 +78,13 @@ $form_textarea_min_height: 60px !default;
 
 // #Links
 $link_color: #333 !default;
-$link_decoration: underline !default;
+$link_decoration: none !default;
 $link_outline: 0 !default;
 $link_hover_color: #000 !default;
 $link_hover_decoration: none !default;
 
 // #Headings
-$heading_font: Arial, sans-serif !default;
+$heading_font: "ITCLubalinGraphBook", Arial, sans-serif !default;
 $heading_font_weight: normal !default;
 $heading_color: #181818 !default;
 
@@ -142,12 +142,12 @@ $blockquote_line_height: 24px !default;
 $blockquote_font_style: italic !default;
 
 // #Horizontal rules
-$hr_border: solid #ddd !default;
+$hr_border: solid #878c93 !default;
 $hr_border_width: 1px 0 0 !default;
-$hr_margin: 10px 0 30px !default;
+$hr_margin: 20px 0 40px !default;
 
 // #Main font
-$body_font_family: Arial, sans-serif !default;
+$body_font_family: "ITCLubalinGraphBook", Arial, sans-serif !default;
 
 // #Lists
 $list_margin: 0 0 20px 0 !default;
