@@ -19,17 +19,19 @@
 				<div class="six columns">
 			<?php endif; ?>
 					<?php echo $column_1;?>			
-				</div>
+				</div>			
 			<?php if( $split_column_2 == TRUE ): ?>
 				<div class="three columns">
-					<?php echo $column_2_split; ?>
+					<?php echo $column_2; ?>
 				</div>
 				<div class="three columns">
+					<?php echo $column_2_split; ?>					
+				</div>
 			<?php else: ?>
 				<div class="six columns">
-			<?php endif; ?>
 					<?php echo $column_2;?>			
 				</div>
+			<?php endif; ?>
 
 		</div>
 	</div>

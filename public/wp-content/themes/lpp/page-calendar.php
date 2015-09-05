@@ -57,17 +57,17 @@ Template Name: Calendar Page
 
 <section class="dynamic-section call-to-action">
 	<div class="big-container cover" style="background-color:#dfd8c6;background-image:url(<?php bloginfo('template_directory'); ?>/assets/images/bg_shadow.png); background-position:center top; background-repeat:repeat-x;">
-	<!-- Call To Action Dynamic Layout-->
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<p>Interested in learning more about us? <a href="<?php echo get_the_permalink(49);?>">Inquire Today</a>!</p>
-			
+		<!-- Call To Action Dynamic Layout-->
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<p>Interested in learning more about us? <a href="<?php echo get_the_permalink(49);?>">Inquire Today</a>!</p>
+				
+				</div>
 			</div>
 		</div>
+		<!-- END Call To Action Dynamic Layout-->
 	</div>
-	<!-- END Call To Action Dynamic Layout-->
-		</div>
 </section>
 
 <!-- End Calendar Template -->

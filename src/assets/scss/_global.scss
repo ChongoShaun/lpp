@@ -61,8 +61,15 @@ hr {
 	}
 }
 
+.home-portal{
+	padding:5px;
+	position:absolute;
+	right:20px;
+	top:0;
+}
+
 #menu-utility-menu{
-	padding-left:30px;
+	padding-left:45px;
 	margin:5px 0 10px !important;
 	li{
 		font-size:14px;
@@ -87,7 +94,7 @@ hr {
 }
 
 #menu-main-menu{
-	padding-left:30px;
+	padding-left:45px;
 	li{
 		font-size:16px;
 		padding-right:15px;
@@ -131,10 +138,7 @@ hr {
 		text-transform: uppercase;
 		font-size:18px;
 		&:hover{
-			background-image:url(../images/bg_shadow.png);
-			background-repeat: repeat-x;
-			background-position:center top;
-			background-color:#218bc3;
+			color:#fba919;
 		}
 	}
 	.current_page_item{
@@ -143,6 +147,9 @@ hr {
 			background-repeat: repeat-x;
 			background-position:center top;
 			background-color:#218bc3;
+			&:hover{
+				color:#fff;
+			}
 		}
 	}
 }
@@ -177,7 +184,7 @@ hr {
 			text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
-
+             cursor: pointer;
 		}
 		.cycle-pager-active{
 			color:#57acda;
@@ -323,9 +330,42 @@ hr {
 	p{
 		font-size:15px;
 		line-height:18px;
+		font-family: Arial, sans-serif;
 	}
 	figcaption{
 		background-color:rgba(251,169,25,.85);
+	}
+	img{
+		width:97%;
+		border:6px solid #d3d3cc;
+		box-shadow: 2px 2px 5px 0px #8c877c;		
+		
+	}
+}
+
+.show-hide-two-column{
+	@extend %dynamic-layout;
+	padding-bottom:20px;
+	p{
+		font-size:15px;
+		line-height:18px;
+		font-family: Arial, sans-serif;
+	}
+	figcaption{
+		background-color:rgba(251,169,25,.85);
+	}
+	.toggle{
+		text-align:right;
+		a{
+			margin:15px 0 0;
+		}
+	}
+	.visible{
+		
+	}
+	.hidden{
+		display:none;
+		margin-top:20px;
 	}
 }
 
@@ -333,6 +373,13 @@ hr {
 	@extend %dynamic-layout;
 	p{
 		font-size:15px;
+		font-family: Arial, sans-serif;
+	}
+	img{
+		width:95%;
+		border:6px solid #d3d3cc;
+		box-shadow: 2px 2px 5px 0px #8c877c;		
+		
 	}
 }
 
@@ -346,6 +393,74 @@ hr {
 		border:6px solid #d3d3cc;
 		box-shadow: 2px 2px 5px 0px #8c877c;
 	}
+}
+
+table{
+	td{
+		font-family: Arial, sans-serif
+	}
+}
+
+.news-calendar{
+	.big-container{
+		background-color:#044366 !important;
+		background-image:url(../images/bg_calendar_home.jpg);
+		background-size:cover;
+		background-repeat:no-repeat;
+		
+	}
+	h2{
+		color:#fff;
+	}
+	h5{
+		margin:0;
+		line-height:normal;
+		font-family: Arial, sans-serif;
+		font-size:14px;
+	}
+	p{
+		color:#fff;
+	}
+	a{
+		color:#fba919;
+		font-weight:bold;
+		font-family:  Arial, sans-serif;
+	}
+	.two{
+		text-align:center;
+	}
+	.six{
+		font-family: Arial, sans-serif;
+	}
+	.calendar-date{
+		display:block;
+		margin:10px 0 15px;
+		font-family: "ITCLubalinGraphBook", Arial, sans-serif;
+		font-size:18px;
+		color:#fff;
+		span{
+			padding:5px 0 0;
+			display:block;
+			font-weight:bold;
+			font-size:28px;
+		}
+	}
+	.calendar-content{
+		margin-top:15px;
+		font-family: Arial, sans-serif;
+		.row{
+			margin-top:10px !important;
+		}
+		
+	}
+	.row{
+		border-bottom:1px solid #fff;
+	}
+	.full-calendar{
+		display:block;
+		margin-top:20px !important;
+	}
+
 }
 
 .home{
@@ -368,6 +483,17 @@ hr {
 	.three-columns{
 		p{
 			font-size:15px;
+			font-family: Arial, sans-serif;
+		}
+	}
+	.news{
+		.row{
+				margin-bottom:20px;
+				border-bottom:1px solid #fff;	
+		}
+		p{
+				font-family: Arial, sans-serif;
+				color:#fff;
 		}
 	}
 	
@@ -418,8 +544,12 @@ hr {
 		background-repeat:repeat-x;
 		background-color:#fff;
 		font-size:12px;
+		font-family: Arial, sans-serif;
 	}
 	.copyright{
 		text-align:right;
+	}
+	a{
+		color:#218bc3
 	}
 }

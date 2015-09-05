@@ -34,6 +34,23 @@
 	<!-- Core Header
 	================================================== -->
 	<?php wp_head(); ?>
+	
+	<script type="text/javascript">
+		jQuery( document ).ready(function() {
+			jQuery("[id^=collapse]").click(function(){
+			     jQuery(this).text(function(i, text){
+			          return text === "MORE" ? "CLOSE" : "MORE";
+			      })
+
+			    jQuery(this).parent().parent().parent().find('.hidden').slideToggle("slow", function() {
+					// Animation complete.
+					
+				});
+			});		
+
+
+		});
+	</script>
 
 </head>
 <body <?php body_class(); ?>>
@@ -51,6 +68,7 @@
 				<div class="eight columns">
 					<div class="row">
 						<?php wp_nav_menu( array( 'theme_location' => 'utility-menu' ) ); ?>
+						<a href="#" class="home-portal button">PARENT PORTAL</a>
 					</div>
 					<div class="row">
 						<nav>

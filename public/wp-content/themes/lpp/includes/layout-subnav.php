@@ -3,7 +3,7 @@
 			<div class="container">
 				<ul class="clearfix">
 					<?php 	
-					if (tribe_is_event() || (tribe_is_month() && !is_tax()) || ( tribe_is_past() || tribe_is_upcoming() && !is_tax() ) || ( tribe_is_day() && !is_tax() ) || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular( 'tribe_events' )): 
+					if (is_page('news') || tribe_is_event() || (tribe_is_month() && !is_tax()) || ( tribe_is_past() || tribe_is_upcoming() && !is_tax() ) || ( tribe_is_day() && !is_tax() ) || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular( 'tribe_events' )): 
 					?>
 						<li class="page_item page-item-37">
 							<a></a>

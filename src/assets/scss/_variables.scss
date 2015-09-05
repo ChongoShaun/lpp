@@ -169,11 +169,11 @@ $list_item_paragraph_line_height: 21px !default;
 $fallback_hex_gradient_bg: #CCC !default;
 
 // #Tables
-$table_background: #FFF !default;
-$table_margin: 10px 0 !default;
+$table_background: none !default;
+$table_margin: 10px 0 30px !default;
 $table_td_th_padding: 8px !default;
 $table_td_th_line_height: 21px !default;
-$table_border_color: #CCC !default;
+$table_border_color: #999 !default;
 $table_border_radius: 3px !default;
 $table_alt_color: #EFEFEF !default;
 $table_hover_color: #999 !default;
