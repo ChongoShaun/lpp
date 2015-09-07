@@ -19,7 +19,7 @@ Template Name: Home Page
 	?>
 	
 	<section class="dynamic-section news-calendar">
-		<div class="big-container" style="background-image:url(<?php bloginfo('template_directory');?>/assets/images/bg_calendar_home.png); background-position:center top; background-size:cover; background-repeat:repeat-x">
+		<div class="big-container" style="background-image:url(<?php bloginfo('template_directory');?>/assets/images/bg_calendar_home.jpg); background-position:center top; background-size:cover; background-repeat:repeat-x">
 			<div class="container">
 				<div class="three columns news">
 					<h2>News</h2>

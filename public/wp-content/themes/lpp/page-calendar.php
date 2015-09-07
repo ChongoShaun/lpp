@@ -11,8 +11,19 @@ Template Name: Calendar Page
 	
 	<?php
 		// Load hero section
-		get_template_part('includes/layout', 'hero');
-	?>
+		$page_id = "111"; //example
+
+		if (has_post_thumbnail($page_id) ):
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id($page_id), 'full' );
+		endif;
+		$image_URI = $image[0];
+   			?>
+   		<section id="page-hero">
+			<div class="big-container full-width small-hero">
+				<div class="small-slide" style="background-image: url(<?php echo $image_URI;?>);">&nbsp;</div>
+			</div>
+		</section>
+	
 
 	<?php
 		// Load subnav section
