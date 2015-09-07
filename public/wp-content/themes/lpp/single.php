@@ -2,7 +2,6 @@
 
 	<!-- News Page
 	================================================== -->
-	
 	<?php
 		// Load hero section
 		get_template_part('includes/layout', 'hero');

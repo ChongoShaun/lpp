@@ -535,6 +535,85 @@ table{
 	}
 }
 
+/* Form */
+
+.gform_wrapper {
+	.gform_fields{
+		padding:0 !important;	
+	}
+	.gsection{
+		padding:25px 0 0 !important;
+		border:0 !important;	
+		&:first-child{
+			padding:0 !important;
+		}	
+	}
+	.gsection_title{
+		clear:both !important;
+		line-height:normal !important;
+	}
+	li{
+		margin:0 !important;
+	}
+	label{
+		display:inline-block;
+	}
+	.gfield_label{
+		display:none;
+	}
+	.gfield_radio{
+		margin:0;
+		padding:0;
+		clear:both;
+		li{
+			float:left;
+			display:inline !important;
+		}
+		label{
+			padding:0 20px 0 10px;
+		}
+	}
+	.left-field{
+		float:left !important;
+		width:35%;
+		input[type="text"]{
+			width:90% !important;
+		}
+	}
+	.right-field{
+		float:left !important;
+		width:60%;
+		input[type="text"]{
+			width:98%;
+			
+		}
+	}
+	.clear-multi{
+		clear:both;
+		padding-top:20px;
+	}
+	h2{
+		margin-top:20px;
+		font-size:20px !important;
+	}
+	select{
+		float:left;
+	}
+	textarea{
+		margin:0;
+		width:95% !important;
+	}
+	input[type="submit"]{
+		float:none;
+	}
+	.gform_footer{
+		display:block;
+		padding:20px 0 0;
+		clear:both;
+	}
+
+}
+
 /* Footer */
 
 #footer{
