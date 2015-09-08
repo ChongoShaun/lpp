@@ -1,11 +1,12 @@
 // Setup variables for project paths
 var themePath = 'public/wp-content/themes/lpp/';
+var themePathPortal = 'public/wp-content/themes/lpp-portal/';
 
 // Include gulp
 var gulp = require('gulp'); 
 
 // Include Our Plugins
-var browserSync = require('browser-sync').create();
+// var browserSync = require('browser-sync').create();
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var sass = require('gulp-sass');
@@ -19,7 +20,7 @@ var pngquant = require('imagemin-pngquant');
 var minifyCss = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var reload = browserSync.reload;
+// var reload = browserSync.reload;
 
 // Lint Task
 gulp.task('lint', function() {
@@ -37,7 +38,8 @@ gulp.task('sass', function() {
 			.pipe(concat('main.css'))
  		.pipe(sourcemaps.write())
         .pipe(gulp.dest(themePath + 'assets/css'))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(themePathPortal + 'assets/css'));
+//         .pipe(reload({stream: true}));
 });
 
 // Process and Compress images
@@ -47,6 +49,7 @@ gulp.task('images', function() {
 	    	optimizationLevel: 5, progressive: true, interlaced: true 
 	    })))
         .pipe(gulp.dest(themePath + 'assets/images'))
+        .pipe(gulp.dest(themePathPortal + 'assets/images'))
 });
 
 // Concatenate & Minify JS
@@ -57,19 +60,22 @@ gulp.task('scripts', function() {
         .pipe(rename('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(themePath + 'assets/js'))
+        .pipe(gulp.dest(themePathPortal + 'assets/js'))
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
+/*
    browserSync.init({
         proxy: "lppschools.dev",
 		port: 3011
 
     });
+*/
     gulp.watch('src/assets/js/*.js', ['lint', 'scripts']);
     gulp.watch('src/assets/images/**/*', ['images']);
     gulp.watch('src/assets/scss/*.scss', ['sass']);
-    gulp.watch("public/**/*.php").on('change', reload);
+//     gulp.watch("public/**/*.php").on('change', reload);
 
 });
 

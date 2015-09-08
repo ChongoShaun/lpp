@@ -19,6 +19,15 @@ switch ($hostname) {
     case 'lppschools.dev':
         define('WP_ENV', 'development');
         break;
+    case 'germania.lppschools.dev':
+        define('WP_ENV', 'development');
+        break;
+    case 'belden.lppschools.dev':
+        define('WP_ENV', 'development');
+        break;
+    case 'webster.lppschools.dev':
+        define('WP_ENV', 'development');
+        break;
     
     case 'l.dev:8888':
         define('WP_ENV', 'staging');
